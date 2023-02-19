@@ -11,6 +11,23 @@ fn sum(a: i32, b: i32) -> i32 {
     return a + b;
 }
 
+/// unit test via cargo
+///
+/// # examples
+/// ```
+/// # cargo test
+///```
+#[test]
+fn test_say_hello() {
+    print!("test, just say hello");
+}
+
+#[test]
+#[should_panic]
+fn test_panic() {
+    panic!("I expected to be panicked");
+}
+
 fn main() {
     println!("{}", sum(10, 20));
     println!("Hello, world!");
